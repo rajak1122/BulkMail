@@ -4,7 +4,7 @@ function MessageInput({ message, setMessage }) {
   return (
     <>
       <div className="flex justify-center mt-10">
-        <div className="w-[80%] md:w-[50%]">
+        <div className="w-[90%] md:w-[50%]">
           <h1 className="mb-2 text-lg font-medium text-[#C1CEDD] md:text-3xl">
             Message*
           </h1>

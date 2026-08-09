@@ -55,7 +55,7 @@ function FileUploader({
   return (
     <>
       <div className="flex justify-center mt-10">
-        <div className="w-[80%] md:w-[50%]">
+        <div className="w-[90%] md:w-[50%]">
           <h1 className="mb-2 text-lg font-medium text-[#C1CEDD] md:text-3xl">
             Upload your file*
           </h1>
@@ -68,7 +68,7 @@ function FileUploader({
             >
               <FiUploadCloud className="text-5xl text-gray-600" />
 
-              <h2 className="text-xl text-[#C1CEDD] font-semibold mt-5">
+              <h2 className="text-lg text-[#C1CEDD] font-semibold mt-5">
                 Drag & Drop <span className="text-blue-500">Excel</span> File
               </h2>
               <p className="text-gray-500 mt-3">or Click to Browse</p>
