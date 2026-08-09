@@ -1,7 +1,7 @@
 import axios from "axios";
 
 function sendEmails(totalEmail, subject, message) {
-  return axios.post("https://bulkmail-backend-gbj0.onrender.com/sendemail", {
+  return axios.post("https://bulk-mail-hqnw.vercel.app/sendemail", {
     totalEmail,
     subject,
     message,

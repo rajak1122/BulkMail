@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 const mailRoutes = require("./routes/mailRoutes");
 const credentialRoutes = require("./routes/credentialRoutes");
 const express = require("express");
@@ -15,8 +16,10 @@ app.use(cors());
 app.use("/api", credentialRoutes);
 app.use("/", mailRoutes);
 
+if (require.main === module) {
+  app.listen(process.env.PORT || 5000, function () {
+    console.log("server started...");
+  });
+}
 
-
-app.listen(5000, function () {
-  console.log("server started...");
-});
+module.exports = app;

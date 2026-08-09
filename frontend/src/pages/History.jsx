@@ -15,7 +15,7 @@ function History() {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await fetch("https://bulkmail-backend-gbj0.onrender.com/history");
+        const response = await fetch("https://bulk-mail-hqnw.vercel.app//history");
 
         if (!response.ok) {
           throw new Error("Failed to fetch history");
