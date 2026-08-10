@@ -15,17 +15,16 @@ function History() {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await fetch("https://bulk-mail-hqnw.vercel.app/history");
+        const response = await fetch("https://vercel.app");
 
         if (!response.ok) {
           throw new Error("Failed to fetch history");
         }
 
         const data = await response.json();
-
         setHistory(data);
       } catch (error) {
-        console.log("History fetch failed:", error);
+        console.error("History fetch failed:", error);
         setError("Unable to load mail history.");
       } finally {
         setLoading(false);
