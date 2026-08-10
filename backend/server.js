@@ -10,14 +10,13 @@ const app = express();
 
 app.use(express.json());
 
-
 app.use(
   cors({
-    origin: true, 
-    credentials: true,
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
-
 
 app.use(async (req, res, next) => {
   try {
