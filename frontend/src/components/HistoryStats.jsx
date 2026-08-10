@@ -39,10 +39,9 @@ function HistoryStats({ history }) {
           key={stat.title}
           className="
             rounded-3xl
-            bg-[#141E30]
             px-6 py-7
             flex items-center justify-between
-            shadow-[-8px_-8px_16px_#35577D,8px_8px_16px_#0b111c]
+            bg-[#141E30] shadow-[6px_6px_12px_#0D1625,-6px_-6px_12px_#1D2B43] hover:shadow-[4px_4px_14px_#0A111D,-4px_-4px_14px_#2A4263] transition-all duration-300
           "
         >
           <div>
