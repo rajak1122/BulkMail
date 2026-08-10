@@ -8,10 +8,28 @@ const connectDB = require("./config/db");
 
 const app = express();
 
-connectDB();
-
 app.use(express.json());
-app.use(cors());
+
+
+app.use(
+  cors({
+    origin: true, 
+    credentials: true,
+  }),
+);
+
+
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    console.error("DB Middleware Error:", error.message);
+    res
+      .status(500)
+      .json({ error: "Internal server error: Database disconnected" });
+  }
+});
 
 app.use("/api", credentialRoutes);
 app.use("/", mailRoutes);
